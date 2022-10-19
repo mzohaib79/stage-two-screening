@@ -17,7 +17,7 @@ class UserService
 
     }
 
-    public function getUsers($request)
+    public function get($request)
     {
 
         $data = $this->user->latest()->get();

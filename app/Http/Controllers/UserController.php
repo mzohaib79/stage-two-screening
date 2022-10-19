@@ -27,7 +27,7 @@ class UserController extends Controller
     {
 
         if ($request->ajax()) {
-            return $this->userService->getUsers($request);
+            return $this->userService->get($request);
         }
         return view('dashboard');
     }
