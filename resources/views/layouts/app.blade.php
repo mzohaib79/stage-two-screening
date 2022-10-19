@@ -9,10 +9,15 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{asset('css/jquery.dataTables.min.css')}}">
+    <style>
+        .dataTables_wrapper .dataTables_length select {
+            padding: 4px 25px 4px 7px !important;
+        }
+    </style>
 </head>
 <body class="font-sans antialiased">
 <div class="min-h-screen bg-gray-100">
@@ -34,9 +39,8 @@
 </div>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-
+<script src="{{ asset('js/jquery-3.6.1.min.js') }}"></script>
+<script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
 <script>
     $(document).ready(function () {
         $('#user-table').DataTable({
